@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pocket Pundit — Survive March Madness</title>
+  <meta name="description" content="Generate smart-sounding basketball analysis and impress your friends during March Madness." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-glow bg-glow--1"></div>
+  <div class="bg-glow bg-glow--2"></div>
+
+  <main>
+    <header>
+      <span class="badge">🏀 THE POCKET PUNDIT</span>
+      <h1>Survive<br/>March Madness</h1>
+      <p class="subtitle">Sound like an expert to your friends — no knowledge required.</p>
+    </header>
+
+    <button id="pickBtn" class="pick-btn" aria-label="Generate a smart pick">
+      <span class="pick-btn__icon">🎯</span>
+      <span class="pick-btn__text">Give Me a Smart Pick</span>
+    </button>
+
+    <div id="resultCard" class="result-card hidden" aria-live="polite">
+      <div class="result-card__team" id="teamName"></div>
+      <div class="result-card__section">
+        <div class="result-card__label">🧠 The Expert Take</div>
+        <p class="result-card__value" id="expertTake"></p>
+      </div>
+      <div class="result-card__divider"></div>
+      <div class="result-card__section">
+        <div class="result-card__label">😂 What This Actually Means</div>
+        <p class="result-card__value result-card__value--casual" id="actualMeaning"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Built for fun. No bets. No gambling. Just vibes. 🏀</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
