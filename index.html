@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Pocket Pundit — Survive March Madness</title>
-  <meta name="description" content="Generate smart-sounding basketball analysis and impress your friends during March Madness." />
+  <meta name="description"
+    content="Generate smart-sounding basketball analysis and impress your friends during March Madness." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- Animated background -->
   <div class="bg-glow bg-glow--1"></div>
@@ -18,7 +21,7 @@
   <main>
     <header>
       <span class="badge">🏀 THE POCKET PUNDIT</span>
-      <h1>Survive<br/>March Madness</h1>
+      <h1>Survive<br />March Madness</h1>
       <p class="subtitle">Sound like an expert to your friends — no knowledge required.</p>
     </header>
 
@@ -40,6 +43,60 @@
       </div>
     </div>
 
+    <!-- Sweet 16 Bracket -->
+    <section class="bracket" id="bracket">
+      <h2 class="bracket__title">🏆 Sweet 16 Bracket</h2>
+      <p class="bracket__subtitle">March 26–27, 2026</p>
+
+      <div class="bracket__day">
+        <div class="bracket__day-label">THU MAR 26</div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">1</span> Texas</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">2</span> Purdue</div>
+        </div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">3</span> Iowa</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">6</span> Nebraska</div>
+        </div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">4</span> Arkansas</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">5</span> Arizona</div>
+        </div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">2</span> Illinois</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">1</span> Houston</div>
+        </div>
+      </div>
+
+      <div class="bracket__day">
+        <div class="bracket__day-label">FRI MAR 27</div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">3</span> St. John's</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">1</span> Duke</div>
+        </div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">4</span> Alabama</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">2</span> Michigan</div>
+        </div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">1</span> UConn</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">5</span> Michigan St.</div>
+        </div>
+        <div class="bracket__matchup">
+          <div class="bracket__team"><span class="seed">2</span> Tennessee</div>
+          <span class="bracket__vs">vs</span>
+          <div class="bracket__team"><span class="seed">3</span> Iowa State</div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <p>Built for fun. No bets. No gambling. Just vibes. 🏀</p>
     </footer>
@@ -47,4 +104,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>

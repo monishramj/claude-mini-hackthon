@@ -210,6 +210,102 @@ h1 {
   background: var(--clr-border);
 }
 
+/* ── Bracket ──────────────────────────────────────── */
+.bracket {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.bracket__title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--clr-team);
+  text-align: center;
+}
+
+.bracket__subtitle {
+  font-size: 0.85rem;
+  color: var(--clr-text-dim);
+  margin-top: -0.6rem;
+  text-align: center;
+}
+
+.bracket__day {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.bracket__day-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  padding: 0.35rem 0.8rem;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.bracket__matchup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.2s, transform 0.15s;
+}
+.bracket__matchup:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(3px);
+}
+
+.bracket__team {
+  flex: 1;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bracket__team:last-child {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.seed {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 6px;
+  background: rgba(255, 207, 64, 0.15);
+  color: var(--clr-team);
+  font-size: 0.7rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.bracket__vs {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-text-dim);
+  flex-shrink: 0;
+}
+
 /* ── Footer ───────────────────────────────────────── */
 footer {
   margin-top: auto;
@@ -225,4 +321,5 @@ footer p {
 @media (max-width: 400px) {
   main { padding: 2rem 1rem 1.5rem; }
   .pick-btn { padding: 0.85rem 1.6rem; font-size: 1.05rem; }
+  .bracket__team { font-size: 0.82rem; }
 }
