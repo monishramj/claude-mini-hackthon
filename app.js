@@ -75,3 +75,61 @@ pickBtn.addEventListener("click", () => {
     btnText.textContent = "Give Me Another Pick";
   }, delay);
 });
+
+/* ── Bracket Hover Stats ──────────────────────────── */
+const TEAM_STATS = {
+  "Texas": { standing: "28-7", ppg: "78.4", topPlayer: "Tre Johnson (21.2 PPG)" },
+  "Purdue": { standing: "30-5", ppg: "81.2", topPlayer: "Fletcher Loyer (15.5 PPG)" },
+  "Iowa": { standing: "25-10", ppg: "83.1", topPlayer: "Payton Sandfort (18.1 PPG)" },
+  "Nebraska": { standing: "24-11", ppg: "76.5", topPlayer: "Brice Williams (16.2 PPG)" },
+  "Arkansas": { standing: "26-9", ppg: "79.8", topPlayer: "Johnell Davis (19.4 PPG)" },
+  "Arizona": { standing: "27-8", ppg: "85.6", topPlayer: "Caleb Love (18.9 PPG)" },
+  "Illinois": { standing: "28-7", ppg: "80.4", topPlayer: "Kylan Boswell (14.2 PPG)" },
+  "Houston": { standing: "32-3", ppg: "72.4", topPlayer: "L.J. Cryer (17.5 PPG)" },
+  "St. John's": { standing: "25-10", ppg: "77.9", topPlayer: "Kadary Richmond (15.8 PPG)" },
+  "Duke": { standing: "29-6", ppg: "82.3", topPlayer: "Cooper Flagg (19.5 PPG)" },
+  "Alabama": { standing: "27-8", ppg: "88.2", topPlayer: "Mark Sears (20.1 PPG)" },
+  "Michigan": { standing: "28-7", ppg: "79.1", topPlayer: "Vlad Goldin (16.5 PPG)" },
+  "UConn": { standing: "33-2", ppg: "84.5", topPlayer: "Alex Karaban (18.6 PPG)" },
+  "Michigan St.": { standing: "25-10", ppg: "75.8", topPlayer: "Jaden Akins (14.9 PPG)" },
+  "Tennessee": { standing: "29-6", ppg: "78.9", topPlayer: "Zakai Zeigler (13.8 PPG)" },
+  "Iowa State": { standing: "30-5", ppg: "76.2", topPlayer: "Tamin Lipsey (15.3 PPG)" }
+};
+
+const bracketTeams = document.querySelectorAll('.bracket__team');
+const statsTooltip = document.getElementById('statsTooltip');
+
+bracketTeams.forEach(teamEl => {
+  teamEl.style.cursor = 'pointer'; // let users know it's hoverable
+  
+  teamEl.addEventListener('mouseenter', (e) => {
+    // Extract name without the seed number
+    const textNodes = Array.from(teamEl.childNodes)
+      .filter(node => node.nodeType === Node.TEXT_NODE)
+      .map(node => node.textContent.trim());
+    
+    // The text after the seed span
+    const teamName = textNodes.join('').trim();
+    
+    const stats = TEAM_STATS[teamName];
+    if (stats) {
+      statsTooltip.innerHTML = `
+        <h4>${teamName}</h4>
+        <p><strong>Record:</strong> ${stats.standing}</p>
+        <p><strong>Offense:</strong> ${stats.ppg} PPG</p>
+        <p><strong>Key Player:</strong> ${stats.topPlayer}</p>
+      `;
+      statsTooltip.classList.add('visible');
+    }
+  });
+  
+  teamEl.addEventListener('mousemove', (e) => {
+    // Follow the mouse
+    statsTooltip.style.left = e.clientX + 'px';
+    statsTooltip.style.top = e.clientY + 'px';
+  });
+  
+  teamEl.addEventListener('mouseleave', () => {
+    statsTooltip.classList.remove('visible');
+  });
+});
