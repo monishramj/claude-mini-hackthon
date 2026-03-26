@@ -1,5 +1,5 @@
 # The Pocket Pundit 🏀
-###### This project was built for the Claude Mini Hackathon (3/25) - Sports Branch. Teams were given 20 minutes to create a simple project and pitch to present. 
+###### This project was built by Monish R.J. and Anubhav M. for the Claude Mini Hackathon (3/25) - Sports Branch. Teams were given 20 minutes to create a simple project and pitch to present. 
  
 🔗 check it out here!! https://monishramj.github.io/claude-mini-hackthon/
 
